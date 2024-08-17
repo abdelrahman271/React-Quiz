@@ -28,13 +28,13 @@ function reducer(state, action) {
         ...initial,
         status: "ready",
         questions: action.payload,
-        counter: state.questions.length * 30,
         high: state.high,
       };
     case "error":
       return { ...state, status: "error" };
     case "active":
-      return { ...state, status: "start" };
+      return { ...state, status: "start",counter: state.questions.length * 30,
+      };
     case "newAnswer":
       const question = state.questions.at(state.index);
 
