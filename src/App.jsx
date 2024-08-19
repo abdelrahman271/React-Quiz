@@ -33,8 +33,7 @@ function reducer(state, action) {
     case "error":
       return { ...state, status: "error" };
     case "active":
-      return { ...state, status: "start",counter: state.questions.length * 30,
-      };
+      return { ...state, status: "start",counter: state.questions.length * 30,};
     case "newAnswer":
       const question = state.questions.at(state.index);
 
